@@ -3,23 +3,26 @@ import profile from "../../asset/image/profile.png";
 import { CustomRoundButton, MiniButton } from "../atoms/CustomButton";
 import {
   LikeOutlined,
+  LikeFilled,
   DislikeOutlined,
+  DislikeFilled,
   WhatsAppOutlined,
   ClockCircleOutlined,
+  AlipayCircleOutlined,
 } from "@ant-design/icons";
 
-export default function LeadsCard({ type }: { type: string }) {
-  function maskWord(word: string) {
-    if (word.length <= 2) return word; // Skip masking if word is too short
-
+export default function LeadsCard({ item }: { item: object }) {
+  
+  const maskWord = (word: string) => {
+    if (word.length <= 2) return word;
     const first = word[0];
     const last = word[word.length - 1];
     const masked = "*".repeat(word.length - 2);
-
     return first + masked + last;
   }
+  const handleUnlock = () => {
 
-  console.log(maskWord("apple"));
+  }
 
   return (
     <div className="border-2 flex p-2 gap-2">
@@ -32,17 +35,13 @@ export default function LeadsCard({ type }: { type: string }) {
           <div className="flex items-center gap-5">
             <div>
               <p className="text-sm">
-                {type === "recepto"
-                  ? maskWord("Jennifer Markus")
-                  : "Jennifer Markus"}
+                {item?.type === "recepto" ? maskWord(item?.name) : item?.name}
               </p>
               <p className="text-xs text-gray-500">
-                {type === "recepto"
-                  ? maskWord("Mumbai, India")
-                  : "Mumbai, India"}
+                {item?.type === "recepto" ? maskWord(item?.place) : item?.place}
               </p>
             </div>
-            {type === "org" && (
+            {item?.type === "org" && (
               <div className="bg-gray-200 text-gray-600 rounded-lg px-4 max-h-5 text-xs py-1 flex items-center">
                 Org's network
               </div>
@@ -51,25 +50,59 @@ export default function LeadsCard({ type }: { type: string }) {
 
           {/* Right side */}
           <div className="flex items-center gap-2">
-            <CustomRoundButton
-              text1="Assign"
-              txColor="#CD7F32"
-              bdrColor="#CD7F32"
-            />
-            <CustomRoundButton
-              text1="View Details"
-              txColor="#CD7F32"
-              bdrColor="#CD7F32"
-            />
-            <div className="bg-[#57f046] h-6 w-6 text-[11px] flex justify-center items-center rounded">
-              94
+            {item?.status === "lock" ? (
+              <CustomRoundButton
+                text1="Unlock"
+                icon2={
+                  <AlipayCircleOutlined
+                    style={{ color: "#FFD700", fontSize: 16 }}
+                  />
+                }
+                text2="3"
+                txColor="#ffffff"
+                bgColor="#0961e0"
+                bdrColor="#0961e0"
+                func={handleUnlock}
+              />
+            ) : (
+              <>
+                <CustomRoundButton
+                  text1="Assign"
+                  txColor="#CD7F32"
+                  bdrColor="#CD7F32"
+                />
+                <CustomRoundButton
+                  text1="View Details"
+                  txColor="#CD7F32"
+                  bdrColor="#CD7F32"
+                />
+              </>
+            )}
+
+            <div
+              className="h-6 w-6 text-[11px] flex justify-center items-center rounded"
+              style={
+                item?.points <= 80
+                  ? { backgroundColor: "#42e36d" }
+                  : { backgroundColor: "#6a6ede" }
+              }
+            >
+              {item?.points}
             </div>
-            <LikeOutlined className="text-[#0961e0]" />
-            <DislikeOutlined className="text-[#0961e0]" />
+            {item?.liked ? (
+              <LikeFilled className="text-[#0961e0]" />
+            ) : (
+              <LikeOutlined className="text-[#0961e0]" />
+            )}
+            {item?.unliked ? (
+              <DislikeFilled className="text-[#0961e0]" />
+            ) : (
+              <DislikeOutlined className="text-[#0961e0]" />
+            )}
           </div>
         </div>
 
-        <p className="w-[75vw] truncate text-[12px]">
+        <p className="w-[73vw] truncate text-[12px]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quidem
           itaque harum, eos tempora alias, reprehenderit sed ullam dolore
           voluptate eaque vel sunt, ipsa illo exercitationem impedit quibusdam
@@ -78,10 +111,10 @@ export default function LeadsCard({ type }: { type: string }) {
         <div className="flex gap-2 mt-2">
           <MiniButton
             text="Found 2 hour ago"
-            icon={<ClockCircleOutlined className="" />}
+            icon={<ClockCircleOutlined className="mr-1" />}
           />
           <MiniButton
-            text="Group Name"
+            text={item?.group_name}
             icon={
               <WhatsAppOutlined className="text-white mr-1 bg-[#57f046] rounded-full p-1" />
             }

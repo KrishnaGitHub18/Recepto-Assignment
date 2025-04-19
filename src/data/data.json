@@ -1,0 +1,222 @@
+[
+  {
+    "type": "recepto",
+    "name": "Aarya Deshmukh",
+    "place": "Mumbai, India",
+    "description": "Dedicated environmentalist promoting sustainable practices across urban communities with an aim to reduce plastic usage and increase eco-awareness.",
+    "status": "unlock",
+    "group_name": "GreenCore",
+    "points": 92,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "UrbanHope Foundation",
+    "place": "Bangalore, India",
+    "description": "A nonprofit organization working to uplift underprivileged children through education, nutrition, and health care across metropolitan slums.",
+    "status": "assigned",
+    "group_name": "EduRise",
+    "points": 85,
+    "liked": false,
+    "unliked": false
+  },
+  {
+    "type": "recepto",
+    "name": "Karan Verma",
+    "place": "Pune, India",
+    "description": "Tech enthusiast turned community advocate, leading digital literacy drives in semi-urban areas to boost employment and skill-building.",
+    "status": "lock",
+    "group_name": "TechBridge",
+    "points": 78,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "Clean Streets Co.",
+    "place": "Delhi, India",
+    "description": "An initiative focused on cleaning and maintaining public infrastructure in major urban areas through citizen participation.",
+    "status": "unlock",
+    "group_name": "CivicTeam",
+    "points": 88,
+    "liked": false,
+    "unliked": false
+  },
+  {
+    "type": "recepto",
+    "name": "Megha Singh",
+    "place": "Chennai, India",
+    "description": "Architect and urban designer contributing to low-cost, sustainable housing projects for displaced families in flood-prone areas.",
+    "status": "assigned",
+    "group_name": "RebuildNation",
+    "points": 97,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "Youth for Change",
+    "place": "Ahmedabad, India",
+    "description": "Empowering the youth with mentorship, mental health resources, and leadership training to foster social impact at grassroots levels.",
+    "status": "lock",
+    "group_name": "LeadNow",
+    "points": 83,
+    "liked": true,
+    "unliked": true
+  },
+  {
+    "type": "recepto",
+    "name": "Tanmay Rathi",
+    "place": "Nagpur, India",
+    "description": "Using social media and storytelling to amplify local success stories and bring attention to overlooked causes in small towns.",
+    "status": "unlock",
+    "group_name": "VoiceBox",
+    "points": 74,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "Swasth Bharat Mission",
+    "place": "Hyderabad, India",
+    "description": "National-level initiative working on sanitation and hygiene education through mass awareness campaigns in rural areas.",
+    "status": "assigned",
+    "group_name": "WellnessCore",
+    "points": 99,
+    "liked": false,
+    "unliked": true
+  },
+  {
+    "type": "recepto",
+    "name": "Ishita Bose",
+    "place": "Kolkata, India",
+    "description": "Student volunteer helping senior citizens with digital skills and providing weekly assistance with tech-related challenges.",
+    "status": "unlock",
+    "group_name": "DigitalDosti",
+    "points": 68,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "Rural Uplift Trust",
+    "place": "Lucknow, India",
+    "description": "Providing basic education, clean water, and vocational training to improve life quality in underserved rural communities.",
+    "status": "lock",
+    "group_name": "GroundRoots",
+    "points": 84,
+    "liked": false,
+    "unliked": true
+  },
+  {
+    "type": "recepto",
+    "name": "Vikram Joshi",
+    "place": "Indore, India",
+    "description": "Mobilizing volunteers to plant trees and create green zones in urban heat islands.",
+    "status": "unlock",
+    "group_name": "EcoTask",
+    "points": 79,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "TeachMore",
+    "place": "Patna, India",
+    "description": "Crowdsourcing educational materials and deploying volunteer teachers for slum kids.",
+    "status": "assigned",
+    "group_name": "ClassUp",
+    "points": 90,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "recepto",
+    "name": "Neelam Kaul",
+    "place": "Bhopal, India",
+    "description": "Leading a waste segregation awareness campaign in local schools and apartments.",
+    "status": "lock",
+    "group_name": "SortSmart",
+    "points": 70,
+    "liked": false,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "Bright Horizons",
+    "place": "Coimbatore, India",
+    "description": "Providing solar-powered lighting systems to remote villages.",
+    "status": "unlock",
+    "group_name": "SolarSpark",
+    "points": 95,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "recepto",
+    "name": "Aman Khan",
+    "place": "Jaipur, India",
+    "description": "Teaching spoken English and soft skills to young job seekers.",
+    "status": "assigned",
+    "group_name": "SkillEdge",
+    "points": 81,
+    "liked": false,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "HealthAhead",
+    "place": "Surat, India",
+    "description": "Running mobile health clinics in areas with low access to hospitals.",
+    "status": "lock",
+    "group_name": "CareFleet",
+    "points": 86,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "recepto",
+    "name": "Pooja Iyer",
+    "place": "Thane, India",
+    "description": "Organizing community clean-up drives and eco workshops in housing societies.",
+    "status": "unlock",
+    "group_name": "LocalLoop",
+    "points": 77,
+    "liked": false,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "SkillUp India",
+    "place": "Nashik, India",
+    "description": "Partnering with small businesses to provide on-the-job training to marginalized youth.",
+    "status": "assigned",
+    "group_name": "WorkForceNow",
+    "points": 89,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "recepto",
+    "name": "Rajeev Malhotra",
+    "place": "Vijayawada, India",
+    "description": "Helping small farmers improve crop yields through modern techniques and app-based guidance.",
+    "status": "lock",
+    "group_name": "AgroAssist",
+    "points": 93,
+    "liked": true,
+    "unliked": false
+  },
+  {
+    "type": "org",
+    "name": "WomenRise",
+    "place": "Mangalore, India",
+    "description": "Supporting women entrepreneurs with microloans, mentorship, and e-commerce access.",
+    "status": "unlock",
+    "group_name": "Empower360",
+    "points": 100,
+    "liked": true,
+    "unliked": false
+  }
+]

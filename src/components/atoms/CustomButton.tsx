@@ -17,15 +17,19 @@ export function CustomRoundButton({
   txColor = "#0961e0",
   bgColor = "#FFF",
   bdrColor = "#0961e0",
+  func = () => {},
 }) {
   return (
     <div
-      className="border text-activeBlue px-10 py-1 rounded-full flex items-center gap-1 text-xs"
+      className="border px-7 py-1 rounded-full flex items-center gap-2 text-xs cursor-pointer transition-all duration-200 ease-in-out
+                 hover:shadow-md hover:scale-105 active:scale-100"
       style={{
         color: txColor,
         backgroundColor: bgColor,
         borderColor: bdrColor,
+        borderWidth: '1px',
       }}
+      onClick={func}
     >
       {icon1}
       {text1}
@@ -34,6 +38,7 @@ export function CustomRoundButton({
     </div>
   );
 }
+
 
 export function MiniButton({ icon = "", text = "" }) {
   return (
