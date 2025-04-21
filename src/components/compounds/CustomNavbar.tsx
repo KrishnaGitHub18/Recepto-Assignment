@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ApartmentOutlined,
   SearchOutlined,
@@ -6,11 +6,17 @@ import {
   AlipayCircleOutlined,
   FilterOutlined,
 } from "@ant-design/icons";
-import profile from "../../asset/image/profile.png";
+import profile from "../../../public/asset/image/profile.png";
 import {CustomButton} from "../atoms/CustomButton";
 import CustomSearchBar from "../molecules/CustomSearchBar";
 
 export default function CustomNavbar({type}: {type: string}) {
+
+  const [credits, setCredits] = useState(0);
+  useEffect(()=>{
+    setCredits(JSON.parse(localStorage.getItem("userdata")).credits);
+  }, [])
+
   return (
     <nav className="flex justify-between items-center">
       <div className="flex gap-5 items-center">
@@ -21,7 +27,7 @@ export default function CustomNavbar({type}: {type: string}) {
       </div>
       <div className="flex gap-5 items-center">
         {type === "leads" && <CustomSearchBar />}
-        <CustomButton icon={<AlipayCircleOutlined />} title="0 Credits" />
+        <CustomButton icon={<AlipayCircleOutlined />} title={`${credits/1000}K credits`} />
         {type === "leads" && <CustomButton icon={<FilterOutlined />} title="Filter" />}
         <div className="flex items-center gap-1">
           <div className="w-10 h-10 rounded-full overflow-hidden">
@@ -32,7 +38,7 @@ export default function CustomNavbar({type}: {type: string}) {
             />
           </div>
           <div className="text-sm">
-            <p className="text-gray-800">Anand Kumar</p>
+            <p className="text-gray-800">{JSON.parse(localStorage.getItem("userdata")).name}</p>
             <p className="text-gray-500">Admin</p>
           </div>
         </div>

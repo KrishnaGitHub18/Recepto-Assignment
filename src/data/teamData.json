@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Olivia Rhye",
+      "role": "Admin",
+      "generated": 123,
+      "unlocked": 123,
+      "assigned": 12
+    },
+    {
+      "name": "Mason Clark",
+      "role": "Removed",
+      "generated": 23,
+      "unlocked": 23,
+      "assigned": 0
+    },
+    {
+      "name": "Ava Johnson",
+      "role": "Member",
+      "generated": 56,
+      "unlocked": 56,
+      "assigned": 15
+    },
+    {
+      "name": "Liam Patel",
+      "role": "Admin",
+      "generated": 12,
+      "unlocked": 12,
+      "assigned": 10
+    },
+    {
+      "name": "Emma Chen",
+      "role": "Member",
+      "generated": 123,
+      "unlocked": 123,
+      "assigned": 5
+    }
+  ]
+  

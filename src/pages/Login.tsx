@@ -13,14 +13,46 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-    message.success("Login Successful!");
-    setTimeout(() => {
-      navigate("/");
-    }, 1000);
-    console.log("Success:", values);
+    if (
+      (values?.username === "admin1" ||
+        values?.username === "admin2" ||
+        values?.username === "admin3" ||
+        values?.username === "admin4" ||
+        values?.username === "admin5") &&
+      values?.password === "admin"
+    ) {
+      message.success("Login Successful!");
+      const nameVal =
+        values?.username === "admin1"
+          ? "Olivia Rhye"
+          : values?.username === "admin2"
+          ? "Ava Johnson"
+          : values?.username === "admin3"
+          ? "Mason Clark"
+          : values?.username === "admin4"
+          ? "Liam Patel"
+          : "Emma Chen";
+
+      localStorage.setItem(
+        "userdata",
+        JSON.stringify({
+          name: nameVal,
+          password: values?.password,
+          verified: true,
+          credits: (Math.floor(Math.random() * 11) + 90)*1000
+        })
+      );
+      setTimeout(() => {
+        navigate("/a/leads");
+      }, 1000);
+    } else {
+      message.error("Invalid Credentials");
+    }
   };
 
-  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
+  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
+    errorInfo
+  ) => {
     message.error("Error in logging in!");
     console.log("Failed:", errorInfo);
   };
@@ -53,7 +85,11 @@ const Login: React.FC = () => {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item<FieldType> name="remember" valuePropName="checked" label={null}>
+        <Form.Item<FieldType>
+          name="remember"
+          valuePropName="checked"
+          label={null}
+        >
           <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
