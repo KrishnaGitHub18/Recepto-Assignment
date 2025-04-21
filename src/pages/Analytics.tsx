@@ -1,5 +1,5 @@
 import React from "react";
-import CustomNavbar from "../components/compounds/customNavbar";
+import CustomNavbar from "../components/compounds/CustomNavbar";
 import AnalyticsCard from "../components/molecules/AnalyticsCard";
 import TeamTable from "../components/compounds/Table";
 
