@@ -1,5 +1,5 @@
 import React from "react";
-import CustomNavbar from "../components/compounds/customNavbar";
+import CustomNavbar from "../components/compounds/CustomNavbar";
 import LeadsCard from "../components/molecules/LeadsCard";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
