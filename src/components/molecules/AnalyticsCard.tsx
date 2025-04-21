@@ -2,8 +2,8 @@ import React from "react";
 import Graph from "../../components/compounds/Graph";
 import { Progress } from "antd";
 import logo from "../../../public/asset/image/logo1.png";
-import like from "../../../public/image/like.png";
-import add from "../../../public/image/add.png";
+import like from "../../../public/asset/image/like.png";
+import add from "../../../public/asset/image/add.png";
 
 export default function AnalyticsCard({title, count, colorA, colorB}: {title: string, count: number, colorA: string, colorB: string}) {
   return (
